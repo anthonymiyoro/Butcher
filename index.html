@@ -27,39 +27,39 @@
         
         var playerBullets = [];
         
-        function Bullet(I) {
-          I.active = true;
+        // function Bullet(I) {
+        //   I.active = true;
         
-          I.xVelocity = 0;
-          I.yVelocity = -I.speed;
-          I.width = 3;
-          I.height = 3;
-          I.color = "#000";
+        //   I.xVelocity = 0;
+        //   I.yVelocity = -I.speed;
+        //   I.width = 3;
+        //   I.height = 3;
+        //   I.color = "#000";
         
-          I.inBounds = function() {
-            return I.x >= 0 && I.x <= CANVAS_WIDTH &&
-              I.y >= 0 && I.y <= CANVAS_HEIGHT;
-          };
+        //   I.inBounds = function() {
+        //     return I.x >= 0 && I.x <= CANVAS_WIDTH &&
+        //       I.y >= 0 && I.y <= CANVAS_HEIGHT;
+        //   };
         
-          I.draw = function() {
-            canvas.fillStyle = this.color;
-            canvas.fillRect(this.x, this.y, this.width, this.height);
-          };
+        //   I.draw = function() {
+        //     canvas.fillStyle = this.color;
+        //     canvas.fillRect(this.x, this.y, this.width, this.height);
+        //   };
           
-          I.update = function() {
-            I.x += I.xVelocity;
-            I.y += I.yVelocity;
+        //   I.update = function() {
+        //     I.x += I.xVelocity;
+        //     I.y += I.yVelocity;
         
-            I.active = I.active && I.inBounds();
-          };
+        //     I.active = I.active && I.inBounds();
+        //   };
         
-          I.explode = function() {
-            this.active = false;
-            // Extra Credit: Add an explosion graphic
-          };
+        //   I.explode = function() {
+        //     this.active = false;
+        //     // Extra Credit: Add an explosion graphic
+        //   };
         
-          return I;
-        }
+        //   return I;
+        // }
         
         enemies = [];
         
