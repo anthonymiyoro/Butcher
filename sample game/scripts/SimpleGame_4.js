@@ -28,6 +28,8 @@ function startGame() {
     myGameArea.start();
 }
 
+
+
 function staticObject()
 {
     // the width and height of the sprites for our static objects
