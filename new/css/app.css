@@ -1,7 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #151515;
+/*    background-color: #151515;*/
+
 }
 
 canvas {
@@ -68,4 +69,19 @@ canvas {
 
 #game-over button {
     font-size: 1.5em;
+}
+button{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid black;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    padding: 10px 24px;
+    border-radius: 100%;
+    outline: none;
+}
+button:hover{
+    background-color: #FFC300;
+    
 }
