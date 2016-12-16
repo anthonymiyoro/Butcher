@@ -21,10 +21,10 @@ var map =
 var gameObjects =
 [
   [0,0,0,0,0,0,0,0,0,0,0],
-  [0,5,0,0,0,0,0,0,0,0,0],
+  [0,5,0,0,0,0,5,0,0,0,0],
   [0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,5,0,0,0,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0,5,0,0],
+  [0,0,5,0,0,0,0,5,0,0,0],
   [0,0,0,0,0,0,4,0,0,0,0],
   [0,0,0,0,0,5,0,0,0,0,0],
   [0,0,0,0,0,0,0,0,0,0,0]
@@ -276,23 +276,23 @@ function createOtherObjects()
   timeDisplay.y = 8;
   sprites.push(timeDisplay);
   
-  gameOverDisplay = Object.create(spriteObject);
-  gameOverDisplay.sourceX = 0;
-  gameOverDisplay.sourceY = 129;
-  gameOverDisplay.sourceWidth = 316;
-  gameOverDisplay.sourceHeight = 290;
-  gameOverDisplay.width = 316;  
-  gameOverDisplay.height = 290;            
-  gameOverDisplay.x = canvas.width / 2 - gameOverDisplay.width / 2;
-  gameOverDisplay.y = canvas.height / 2 - gameOverDisplay.height / 2;
-  gameOverDisplay.visible = false;
-  sprites.push(gameOverDisplay);
+//  gameOverDisplay = Object.create(spriteObject);
+//  gameOverDisplay.sourceX = 0;
+//  gameOverDisplay.sourceY = 129;
+//  gameOverDisplay.sourceWidth = 316;
+//  gameOverDisplay.sourceHeight = 290;
+//  gameOverDisplay.width = 316;  
+//  gameOverDisplay.height = 290;            
+//  gameOverDisplay.x = canvas.width / 2 - gameOverDisplay.width / 2;
+//  gameOverDisplay.y = canvas.height / 2 - gameOverDisplay.height / 2;
+//  gameOverDisplay.visible = false;
+//  sprites.push(gameOverDisplay);
   
   gameOverMessage = Object.create(messageObject);
   gameOverMessage.x = 275;
   gameOverMessage.y = 270;
-  gameOverMessage.font = "bold 30px Helvetica";
-  gameOverMessage.fillStyle = "black";
+  gameOverMessage.font = "bold 50px Helvetica";
+  gameOverMessage.fillStyle = "red";
   gameOverMessage.text = "";
   gameOverMessage.visible = false;
   messages.push(gameOverMessage);
@@ -412,7 +412,7 @@ function playGame()
 function endGame()
 {
   gameTimer.stop();
-  gameOverDisplay.visible = true;
+//  gameOverDisplay.visible = true;
   gameOverMessage.visible = true;
     
   if(bombsDefused === bombs.length)
