@@ -74,7 +74,7 @@ assetsToLoad.push(image);
 var bombsDefused = 0;
 
 //The game timer
-gameTimer.time = 20;
+gameTimer.time = 15;
 gameTimer.start();
 
 //Game states
