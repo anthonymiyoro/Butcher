@@ -1,0 +1,67 @@
+body {
+    background-image:url(backgrounds/grass.png);
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid black;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    padding: 10px 24px;
+    border-radius: 100%;
+    outline: none;
+}
+button:hover{
+    background-color: #FFC300;
+    
+}
+
+@font-face{
+    font-family:"Arcade";
+    src : url(fonts/ARCADECLASSIC.ttf);
+}
+p{
+    font-size: 50px;
+    font-family: Arcade;
+}
+
+#h101{
+    font-size: 50px;
+    font-family: Arcade;
+}
+#h102{
+    font-size: 30px;
+    font-family: Arcade;
+}
+
+#button2{
+    width: 50px;
+    height: 50px;
+    border-radius:0%;
+    padding: 1px 6px 1px 6px;
+}
+
+#button3{
+    width: 180px;
+    height: 150px;
+    border-radius:0%;
+    padding: 1px 6px 1px 6px;
+}
+
+#div01{
+    position: absolute;
+    top=50%;
+    left: 50%;
+}
+
+.centered{
+    position:absolute;
+    width:800px;
+    height:500px;
+    left:35%;
+    top:40%;
+    margin-left:-50px;
+    margin-top:-50px;
+}
