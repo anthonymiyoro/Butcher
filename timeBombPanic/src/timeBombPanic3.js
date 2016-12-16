@@ -21,12 +21,12 @@ var map =
 var gameObjects =
 [
   [0,0,0,0,0,0,0,0,0,0,0],
+  [0,5,0,0,5,0,5,0,0,0,0],
   [0,5,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,5,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,4,0,0,0,0],
-  [0,0,0,0,0,5,0,0,0,0,0],
+  [0,5,0,0,0,0,5,0,5,0,0],
+  [0,0,5,0,0,0,0,5,0,0,0],
+  [0,0,0,0,0,0,4,0,0,5,0],
+  [0,5,5,0,0,5,0,0,5,0,0],
   [0,0,0,0,0,0,0,0,0,0,0]
 ];
 
@@ -74,7 +74,7 @@ assetsToLoad.push(image);
 var bombsDefused = 0;
 
 //The game timer
-gameTimer.time = 20;
+gameTimer.time = 10;
 gameTimer.start();
 
 //Game states
@@ -276,23 +276,23 @@ function createOtherObjects()
   timeDisplay.y = 8;
   sprites.push(timeDisplay);
   
-  gameOverDisplay = Object.create(spriteObject);
-  gameOverDisplay.sourceX = 0;
-  gameOverDisplay.sourceY = 129;
-  gameOverDisplay.sourceWidth = 316;
-  gameOverDisplay.sourceHeight = 290;
-  gameOverDisplay.width = 316;  
-  gameOverDisplay.height = 290;            
-  gameOverDisplay.x = canvas.width / 2 - gameOverDisplay.width / 2;
-  gameOverDisplay.y = canvas.height / 2 - gameOverDisplay.height / 2;
-  gameOverDisplay.visible = false;
-  sprites.push(gameOverDisplay);
+//  gameOverDisplay = Object.create(spriteObject);
+//  gameOverDisplay.sourceX = 0;
+//  gameOverDisplay.sourceY = 129;
+//  gameOverDisplay.sourceWidth = 316;
+//  gameOverDisplay.sourceHeight = 290;
+//  gameOverDisplay.width = 316;  
+//  gameOverDisplay.height = 290;            
+//  gameOverDisplay.x = canvas.width / 2 - gameOverDisplay.width / 2;
+//  gameOverDisplay.y = canvas.height / 2 - gameOverDisplay.height / 2;
+//  gameOverDisplay.visible = false;
+//  sprites.push(gameOverDisplay);
   
   gameOverMessage = Object.create(messageObject);
   gameOverMessage.x = 275;
   gameOverMessage.y = 270;
-  gameOverMessage.font = "bold 30px Helvetica";
-  gameOverMessage.fillStyle = "black";
+  gameOverMessage.font = "bold 50px Helvetica";
+  gameOverMessage.fillStyle = "red";
   gameOverMessage.text = "";
   gameOverMessage.visible = false;
   messages.push(gameOverMessage);
@@ -311,22 +311,22 @@ function playGame()
   //Up
   if(moveUp && !moveDown)
   {
-    alien.vy = -1.5;
+    alien.vy = -5;
   }
   //Down
   if(moveDown && !moveUp)
   {
-    alien.vy = 1.5;
+    alien.vy = 5;
   }
   //Left
   if(moveLeft && !moveRight)
   {
-    alien.vx = -1.5;
+    alien.vx = -5;
   }
   //Right
   if(moveRight && !moveLeft)
   {
-    alien.vx = 1.5;
+    alien.vx = 5;
   }
 
   //Set the alien's velocity to zero if none of the keys are being pressed
@@ -412,7 +412,7 @@ function playGame()
 function endGame()
 {
   gameTimer.stop();
-  gameOverDisplay.visible = true;
+//  gameOverDisplay.visible = true;
   gameOverMessage.visible = true;
     
   if(bombsDefused === bombs.length)
