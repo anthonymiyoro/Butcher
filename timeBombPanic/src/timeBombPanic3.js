@@ -311,22 +311,22 @@ function playGame()
   //Up
   if(moveUp && !moveDown)
   {
-    alien.vy = -4.4;
+    alien.vy = -4.0;
   }
   //Down
   if(moveDown && !moveUp)
   {
-    alien.vy = 4.4;
+    alien.vy = 4.0;
   }
   //Left
   if(moveLeft && !moveRight)
   {
-    alien.vx = -4.4;
+    alien.vx = -4.0;
   }
   //Right
   if(moveRight && !moveLeft)
   {
-    alien.vx = 4.4;
+    alien.vx = 4.0;
   }
 
   //Set the alien's velocity to zero if none of the keys are being pressed
