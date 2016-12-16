@@ -1,4 +1,4 @@
-//--- The sprite object
+ //--- The sprite object
 
 var spriteObject =
 {
