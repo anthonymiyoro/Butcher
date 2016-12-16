@@ -377,7 +377,8 @@ function initRocks()
     // Set up the base rock Image object
     // and load in the correct image we want to use
     baseRock = new Image();
-    baseRock.src = "images/SimpleBrick.png";
+//    baseRock.src = "images/SimpleBrick.png";
+    baseRock.src = "assets/backgrounds/grass.png";
     // once it has loaded into memory we loop through 
     // and create a new staticObject and set the image to our base
     baseRock.onload = function()
