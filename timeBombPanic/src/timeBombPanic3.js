@@ -21,12 +21,12 @@ var map =
 var gameObjects =
 [
   [0,0,0,0,0,0,0,0,0,0,0],
-  [0,5,0,0,0,0,5,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,5,0,0],
+  [0,5,0,0,5,0,5,0,0,0,0],
+  [0,5,0,0,0,0,0,0,0,0,0],
+  [0,5,0,0,0,0,5,0,5,0,0],
   [0,0,5,0,0,0,0,5,0,0,0],
-  [0,0,0,0,0,0,4,0,0,0,0],
-  [0,0,0,0,0,5,0,0,0,0,0],
+  [0,0,0,0,0,0,4,0,0,5,0],
+  [0,5,5,0,0,5,0,0,5,0,0],
   [0,0,0,0,0,0,0,0,0,0,0]
 ];
 
@@ -311,22 +311,22 @@ function playGame()
   //Up
   if(moveUp && !moveDown)
   {
-    alien.vy = -1.5;
+    alien.vy = -5;
   }
   //Down
   if(moveDown && !moveUp)
   {
-    alien.vy = 1.5;
+    alien.vy = 5;
   }
   //Left
   if(moveLeft && !moveRight)
   {
-    alien.vx = -1.5;
+    alien.vx = -5;
   }
   //Right
   if(moveRight && !moveLeft)
   {
-    alien.vx = 1.5;
+    alien.vx = 5;
   }
 
   //Set the alien's velocity to zero if none of the keys are being pressed
